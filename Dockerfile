@@ -18,6 +18,6 @@ RUN yum update -y \
 	# Install Oracle JDK
 	&& mkdir $JDK_INSTALL_PATH \
 	&& cd $JDK_INSTALL_PATH \
-	&& wget https://github.com/yexianyi/docker-assets/blob/JDK/$JDK_PACKAGE \
+	&& wget https://media.githubusercontent.com/media/yexianyi/docker-assets/JDK/$JDK_PACKAGE \
 	&& tar -xzvf $JDK_PACKAGE \
 	&& rm -f ./$JDK_PACKAGE \
