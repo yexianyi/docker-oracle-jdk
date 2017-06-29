@@ -1,11 +1,10 @@
 # This docker file is for creating CentOS7 + JDK1.8
 FROM centos:7.3.1611
 
-ARG JDK_VERSION=jdk-8u131
-ARG JDK_PACKAGE=$JDK_VERSION-linux-x64.tar.gz
+ARG JDK_PACKAGE=jdk-8u131-linux-x64.tar.gz
 ARG JDK_INSTALL_PATH=/usr/lib/java
 
-ENV JAVA_HOME=$JDK_INSTALL_PATH/$JDK_VERSION
+ENV JAVA_HOME=$JDK_INSTALL_PATH/jdk1.8.0_131
 ENV PATH=$JAVA_HOME/bin:$PATH
 
 
