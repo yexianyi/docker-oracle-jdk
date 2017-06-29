@@ -12,6 +12,7 @@ MAINTAINER Xianyi Ye <https://cn.linkedin.com/in/yexianyi>
 
 RUN zypper update -y \
 	&& zypper install -y wget \
+	&& zypper install -y tar \
 	&& zypper clean --all \
 	
 	# Install Oracle JDK
