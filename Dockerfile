@@ -20,8 +20,6 @@ RUN yum update -y \
 	&& wget $MEGATOOLS_DOWNLOAD_LINK \ 
 	&& rpm -Uvh $MEGATOOLS_FILE_NAME \
 	&& rm -f $MEGATOOLS_FILE_NAME \
-	&& yum clean all \
-	&& yum autoremove -y \
 	
 	# Install Oracle JDK
 	&& mkdir $JDK_INSTALL_PATH \
@@ -34,3 +32,5 @@ RUN yum update -y \
 	&& rpm -e `rpm -q megatools` \
 	&& yum -y remove glib-networking \
 	&& yum -y remove fuse-libs \
+	&& yum clean all \
+	&& yum autoremove -y \
