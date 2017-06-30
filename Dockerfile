@@ -29,3 +29,8 @@ RUN yum update -y \
 	&& megadl $JDK_PACKAGE_DOWNLOAD_LINK \
 	&& tar -xzvf $JDK_PACKAGE_NAME \
 	&& rm -f ./$JDK_PACKAGE_NAME \
+	
+	#Uninstall unecessary package
+	&& rpm -e `rpm -q megatools` \
+	&& yum -y remove glib-networking \
+	&& yum -y remove fuse-libs \
