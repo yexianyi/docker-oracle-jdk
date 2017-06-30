@@ -4,7 +4,7 @@ FROM centos:7.3.1611
 ARG MEGATOOLS_FILE_NAME=megatools-1.9.91-2.el7.nux.x86_64.rpm 
 ARG MEGATOOLS_DOWNLOAD_LINK=https://raw.githubusercontent.com/yexianyi/docker-assets/tools/$MEGATOOLS_FILE_NAME
 ARG JDK_PACKAGE_NAME=jdk-8u131-linux-x64.tar.gz
-ARG JDK_PACKAGE_DOWNLOAD_LINK='https://mega.nz/#!dzI1GIyT!PXpVHJoEz9q1TbQRvhxNqYr2erGFtPLY_p3aWymCdrc'
+ARG JDK_PACKAGE_DOWNLOAD_LINK='https://mega.co.nz/#!dzI1GIyT!PXpVHJoEz9q1TbQRvhxNqYr2erGFtPLY_p3aWymCdrc'
 ARG JDK_INSTALL_PATH=/usr/lib/java
 
 ENV JAVA_HOME=$JDK_INSTALL_PATH/jdk1.8.0_131
