@@ -1,5 +1,5 @@
 # This docker file is for creating CentOS7 + JDK1.8
-FROM centos:7.3.1611
+FROM yexianyi/systemd:latest
 
 ARG MEGATOOLS_FILE_NAME=megatools-1.9.91-2.el7.nux.x86_64.rpm 
 ARG MEGATOOLS_DOWNLOAD_LINK=https://raw.githubusercontent.com/yexianyi/docker-assets/tools/$MEGATOOLS_FILE_NAME
@@ -9,7 +9,7 @@ ARG JDK_INSTALL_PATH=/usr/lib/java
 
 ENV JAVA_HOME=$JDK_INSTALL_PATH/jdk1.8.0_131
 ENV PATH=$JAVA_HOME/bin:$PATH
-
+ENV container docker
 
 MAINTAINER Xianyi Ye <https://cn.linkedin.com/in/yexianyi>
 
